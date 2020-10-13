@@ -1,9 +1,10 @@
 .container{
-    background-color: grey;
+    background-color: #1E90FF;
     color: red;
     margin-left:auto;
     margin-right:auto;
     width:  400px;
     height: 300px;
     font-size: 50px;
+    display:flex;
 }
