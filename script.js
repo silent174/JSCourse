@@ -1,29 +1,21 @@
 "use strict";
  
-// const category = 'toys';
-// console.log(`https://mysite/${category}/5`);
+const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
 
-// const name = prompt("Как тебя зовут?", "");
-// const age = prompt(`Сколько тебе лет ${name}?`,"");
-// const city = prompt(`Из какого ты города. ${name}?`,"");
-// alert(`Добро пожаловать, ${name},  тебе ${age} лет и ты из города ${city}`);
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies:{},
+    actors:{},
+    genres:[],
+    private:false
+};
 
-let incr = 10,
-    decr = 10;
+let a = prompt("Один из последних просмотренных фильмов? ", ""),
+    b = prompt("На сколько оцените его? ", ""), 
+    c = prompt("Один из последних просмотренных фильмов? ", ""),
+    d = prompt("На сколько оцените его? ", "");
 
-// incr++;
-// decr--;
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
-console.log(++incr);
-console.log(--decr);
-
-console.log(5%2);
-
-console.log(2*4 === 8);
-
-const ischecked = true,
-      isclose = false;
-
-console.log(ischecked || !isclose);
-
-
+console.log(personalMovieDB);
