@@ -1,54 +1,39 @@
 "use strict";
  
-// const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
+const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
 
-// const personalMovieDB = {
-//     count: numberOfFilms,
-//     movies:{},
-//     actors:{},
-//     genres:[],
-//     private:false
-// };
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies:{},
+    actors:{},
+    genres:[],
+    private:false
+};
 
-// let a = prompt("Один из последних просмотренных фильмов? ", ""),
-//     b = prompt("На сколько оцените его? ", ""), 
-//     c = prompt("Один из последних просмотренных фильмов? ", ""),
-//     d = prompt("На сколько оцените его? ", "");
-
-// personalMovieDB.movies[a] = b;
-// personalMovieDB.movies[c] = d;
-
-// console.log(personalMovieDB);
-
-// const num = 70;
-
-// switch (num){
-//     case 15: console.log("num os not 15");
-//     break;
-//     case 22: console.log("num is not 22");
-//     break;
-//     case 10: console.log("num is 10. Congratilations!");
-//     break; 
-//     default: console.log("there is not right number");
-//     break;
-// }
-let num = 10;
-
-// while(num <= 24){
-//     console.log(num);
-//     num++;
-// }
-
-// do{
-//     console.log(num);
-//     num++
-// }
-// while (num < 20);
-
-for (let i = 1; i < 8; i++){
-    if (i === 6 ){
-        // break;
-        continue;
+for (let i = 0; i < 2; i++) {
+    const a = prompt("Один из последних просмотренных фильмов? ", ""),
+          b = prompt("На сколько оцените его? ", "");
+         
+    if (a != null && b != null && a != '' && b != '' && a.length < 50){
+        personalMovieDB.movies[a] = b; 
+        console.log("done!"); 
+    } else {
+        console.log("erroe");
+        i--;
     }
-    console.log(i);
-}
+    
+        }
+        if (personalMovieDB.count < 10){
+            console.log("просмотрено довольно мало фильмов");
+
+        } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30){
+            console.log("you're really like watching movies!");
+        }
+        else if (personalMovieDB.count >=50 ){
+            console.log("You fucking Moviewatcher!");
+        }
+        else{
+            console.log("WRONG");
+        }
+console.log(personalMovieDB);
+
